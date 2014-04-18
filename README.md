@@ -6,11 +6,11 @@ A collection of utility classes to work with PHP Exceptions
 
 ## Requirements
 
-Primaids requires PHP 5.4 (or later).
+Chadicus\Exceptions requires PHP 5.4 (or later).
 
 ##Composer
 To add the library as a local, per-project dependency use [Composer](http://getcomposer.org)! Simply add a dependency on
-`chadicus/primaids` to your project's `composer.json` file such as:
+`chadicus/exceptions` to your project's `composer.json` file such as:
 
 ```json
 {
