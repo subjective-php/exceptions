@@ -2,14 +2,14 @@
 namespace Chadicus\Exception;
 
 /**
- * Static utility class for exceptions
+ * Static utility class for exceptions.
  */
 class Util
 {
     /**
      * Returns the Exception that is the root cause of one or more subsequent exceptions.
      *
-     * @return Exception
+     * @return \Exception
      */
     final public static function getBaseException(\Exception $exception)
     {
