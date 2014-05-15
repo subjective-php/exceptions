@@ -77,4 +77,29 @@ final class UtilTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse(Util::raise(E_USER_NOTICE, 'test', __FILE__, __LINE__));
         error_reporting($restoreLevel);
     }
+
+    /**
+     * Verify basic behavior of toArray().
+     *
+     * @test
+     * @covers ::toArray
+     *
+     * @return void
+     */
+    public function toArray()
+    {
+        $expectedLine = __LINE__ + 1;
+        $result = Util::toArray(new \RuntimeException('a message', 21));
+
+        $expected = array(
+            'type' => 'RuntimeException',
+            'message' => 'a message',
+            'code' => 21,
+            'file' => __FILE__,
+            'line' => $expectedLine,
+            'trace' => $result['trace'],
+        );
+
+        $this->assertSame($expected, $result);
+    }
 }

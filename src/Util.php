@@ -36,4 +36,23 @@ class Util
 
         throw new \ErrorException($message, 0, $level, $file, $line);
     }
+
+    /**
+     * Converts the given Exception to an array.
+     *
+     * @param \Exception $exception The exception to convert.
+     *
+     * @return array
+     */
+    final public static function toArray(\Exception $exception)
+    {
+        return array(
+            'type' => get_class($exception),
+            'message' => $exception->getMessage(),
+            'code' => $exception->getCode(),
+            'file' => $exception->getFile(),
+            'line' => $exception->getLine(),
+            'trace' => $exception->getTraceAsString(),
+        );
+    }
 }
