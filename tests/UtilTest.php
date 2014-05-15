@@ -2,6 +2,8 @@
 namespace Chadicus\Exception;
 
 /**
+ * Unit tests for the \Chadicus\Exception\Util class.
+ *
  * @coversDefaultClass \Chadicus\Exception\Util
  */
 final class UtilTest extends \PHPUnit_Framework_TestCase

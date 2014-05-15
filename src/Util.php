@@ -2,12 +2,14 @@
 namespace Chadicus\Exception;
 
 /**
- * Static utility class for exceptions
+ * Static utility class for exceptions.
  */
 class Util
 {
     /**
      * Returns the Exception that is the root cause of one or more subsequent exceptions.
+     *
+     * @param \Exception $exception The exception of which to find a base exception.
      *
      * @return Exception
      */
@@ -22,11 +24,15 @@ class Util
 
     /**
      * Throws a new \ErrorException based on the error information provided.
-     * To be used as a callback for {@see set_error_handler()}
+     *
+     * @param integer $level   The level of the error raised.
+     * @param string  $message The error message.
+     * @param string  $file    The filename from which the error was raised.
+     * @param integer $line    The line number at which the error was raised.
      *
      * @return bool false
      *
-     * @throws \ErrorException
+     * @throws \ErrorException Thrown based on information given in parameters.
      */
     final public static function raise($level, $message, $file = null, $line = null)
     {
