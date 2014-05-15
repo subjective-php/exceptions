@@ -1,4 +1,4 @@
-<phpunit forceCoversAnnotation="true" strict="true">
+<phpunit colors="true" forceCoversAnnotation="true" strict="true">
     <testsuites>
         <testsuite name="Chadicus Exceptions Test Suite">
             <directory suffix="Test.php">tests</directory>
