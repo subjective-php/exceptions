@@ -61,4 +61,15 @@ class Util
             'trace' => $exception->getTraceAsString(),
         );
     }
+
+    /**
+     * Creates an ErrorException based on the error from error_get_last().
+     *
+     * @return \ErrorException
+     */
+    final public static function fromLastError()
+    {
+        $error = error_get_last();
+        return new \ErrorException($error['message'], 0, $error['type'], $error['file'], $error['line']);
+    }
 }

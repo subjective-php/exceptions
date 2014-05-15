@@ -104,4 +104,25 @@ final class UtilTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame($expected, $result);
     }
+
+    /**
+     * Verifies basic behavior of fromLastError().
+     *
+     * @test
+     * @covers ::fromLastError
+     *
+     * @return void
+     */
+    public function fromLastError()
+    {
+        $restoreLevel = error_reporting(0);
+        trigger_error('test', E_USER_NOTICE);
+        $exception = Util::fromLastError();
+        $this->assertSame('test', $exception->getMessage());
+        $this->assertSame(0, $exception->getCode());
+        $this->assertSame(E_USER_NOTICE, $exception->getSeverity());
+        $this->assertSame((__LINE__) - 5, $exception->getLine());
+        $this->assertSame(__FILE__, $exception->getFile());
+        error_reporting($restoreLevel);
+    }
 }
