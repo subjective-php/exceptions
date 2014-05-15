@@ -125,15 +125,33 @@
         </a>
     </li>
 
+                                                                                                        <li class="method public">
+        <a href="#method_raise" title="raise :: Throws a new \ErrorException based on the error information provided.">
+            <span class="description">Throws a new \ErrorException based on the error information provided.</span><pre>raise</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_toArray" title="toArray :: Converts the given Exception to an array.">
+            <span class="description">Converts the given Exception to an array.</span><pre>toArray</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_fromLastError" title="fromLastError :: Creates an ErrorException based on the error from error_get_last().">
+            <span class="description">Creates an ErrorException based on the error from error_get_last().</span><pre>fromLastError</pre>
+        </a>
+    </li>
+
                                                 </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                </ul>
+                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                </ul>
+                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -150,7 +168,7 @@
                 <h1>Util</h1>
                 <small style="display: block; text-align: right">
                                                         </small>
-                <p class="short_description">Static utility class for exceptions</p>
+                <p class="short_description">Static utility class for exceptions.</p>
                 <div class="details">
                     <div class="long_description">
                         
@@ -177,6 +195,82 @@
                                                 <td>
                                                                                                     </td>
                                             </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$exception</h4>
+                                                <code>\Exception</code><p><p>The exception of which to find a base exception.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Chadicus\Exception\Exception</code><p></p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_raise"></a>
+                        <div class="element clickable method public  method_raise" data-toggle="collapse" data-target=".method_raise .collapse">
+                            <h2>Throws a new \ErrorException based on the error information provided.</h2>
+                            <pre>raise(integer $level, string $message, string $file = null, integer $line = null) : bool</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                <span class="label">final</span>                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown based on information given in parameters.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$level</h4>
+                                                <code>integer</code><p><p>The level of the error raised.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code>string</code><p><p>The error message.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$file</h4>
+                                                <code>string</code><p><p>The filename from which the error was raised.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$line</h4>
+                                                <code>integer</code><p><p>The line number at which the error was raised.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>bool</code><p><p>false</p></p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_toArray"></a>
+                        <div class="element clickable method public  method_toArray" data-toggle="collapse" data-target=".method_toArray .collapse">
+                            <h2>Converts the given Exception to an array.</h2>
+                            <pre>toArray(\Exception $exception) : array</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                <span class="label">final</span>                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
                                                                                     <tr>
                                                 <th>
                                                     
@@ -189,11 +283,44 @@
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$exception</h4>
-                                                <code>\Exception</code><p></p>
+                                                <code>\Exception</code><p><p>The exception to convert.</p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code>\Chadicus\Exception\Exception</code><p></p>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_fromLastError"></a>
+                        <div class="element clickable method public  method_fromLastError" data-toggle="collapse" data-target=".method_fromLastError .collapse">
+                            <h2>Creates an ErrorException based on the error from error_get_last().</h2>
+                            <pre>fromLastError() : \ErrorException</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                <span class="label">final</span>                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>\ErrorException</code><p></p>
                                                                     </div>
                             </div>
                         </div>
@@ -219,7 +346,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Thu, 17 Apr 2014 22:31:57 -0400.<br/>
+            generated on Thu, 15 May 2014 15:36:25 -0400.<br/>
     </footer>
     </body>
 </html>
