@@ -20,6 +20,6 @@
         "chadicus/coding-standard": "dev-master"
     },
     "autoload": {
-        "psr-4": { "Chadicus\\Exception\\": "src/" }
+        "psr-4": { "Chadicus\\Util\\": "src/" }
     }
 }

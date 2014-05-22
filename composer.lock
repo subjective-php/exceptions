@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b80f189669db5428fa81e2eb46cc9298",
+    "hash": "b64be822fbbfa58cabede83e18195c70",
     "packages": [
 
     ],
@@ -870,16 +870,16 @@
         },
         {
             "name": "phpdocumentor/phpdocumentor",
-            "version": "v2.4.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/phpDocumentor2.git",
-                "reference": "d7503ada7386aa6b2956224d50a8d0226a22a99f"
+                "reference": "bf9fa40f6d00412410025b2e16eb16c315eb0216"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/phpDocumentor2/zipball/d7503ada7386aa6b2956224d50a8d0226a22a99f",
-                "reference": "d7503ada7386aa6b2956224d50a8d0226a22a99f",
+                "url": "https://api.github.com/repos/phpDocumentor/phpDocumentor2/zipball/bf9fa40f6d00412410025b2e16eb16c315eb0216",
+                "reference": "bf9fa40f6d00412410025b2e16eb16c315eb0216",
                 "shasum": ""
             },
             "require": {
@@ -932,12 +932,13 @@
                 "ext-xslcache": "Enabling the XSLCache extension improves the generation of xml based templates."
             },
             "bin": [
-                "bin/phpdoc.php"
+                "bin/phpdoc.php",
+                "bin/phpdoc"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "2.4-dev"
+                    "dev-develop": "2.5-dev"
                 }
             },
             "autoload": {
@@ -961,7 +962,7 @@
                 "documentation",
                 "phpdoc"
             ],
-            "time": "2014-04-01 18:14:51"
+            "time": "2014-05-17 12:25:35"
         },
         {
             "name": "phpdocumentor/reflection",

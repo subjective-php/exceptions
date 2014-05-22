@@ -1,10 +1,10 @@
 <?php
-namespace Chadicus\Exception;
+namespace Chadicus\Util;
 
 /**
  * Static utility class for exceptions.
  */
-class Util
+class Exception
 {
     /**
      * Returns the Exception that is the root cause of one or more subsequent exceptions.
@@ -65,7 +65,7 @@ class Util
     /**
      * Creates an ErrorException based on the error from error_get_last().
      *
-     * @return \ErrorException
+     * @return \ErrorException|null
      */
     final public static function fromLastError()
     {

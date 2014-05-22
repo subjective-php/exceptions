@@ -1,12 +1,12 @@
 <?php
-namespace Chadicus\Exception;
+namespace Chadicus\Util;
 
 /**
- * Unit tests for the \Chadicus\Exception\Util class.
+ * Unit tests for the \Chadicus\Util\Exception class.
  *
- * @coversDefaultClass \Chadicus\Exception\Util
+ * @coversDefaultClass \Chadicus\Util\Exception
  */
-final class UtilTest extends \PHPUnit_Framework_TestCase
+final class ExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Verify basic functionality of getBaseException().
@@ -22,9 +22,9 @@ final class UtilTest extends \PHPUnit_Framework_TestCase
         $b = new \InvalidArgumentException('exception b', 0, $a);
         $c = new \Exception('exception c', 0, $b);
 
-        $this->assertSame($a, Util::getBaseException($c));
-        $this->assertSame($a, Util::getBaseException($b));
-        $this->assertSame($a, Util::getBaseException($a));
+        $this->assertSame($a, Exception::getBaseException($c));
+        $this->assertSame($a, Exception::getBaseException($b));
+        $this->assertSame($a, Exception::getBaseException($a));
     }
 
     /**
@@ -38,7 +38,7 @@ final class UtilTest extends \PHPUnit_Framework_TestCase
     public function getBaseExceptionNoPrevious()
     {
         $e = new \Exception();
-        $this->assertSame($e, Util::getBaseException($e));
+        $this->assertSame($e, Exception::getBaseException($e));
     }
 
     /**
@@ -51,7 +51,7 @@ final class UtilTest extends \PHPUnit_Framework_TestCase
      */
     public function raise()
     {
-        set_error_handler('\Chadicus\Exception\Util::raise');
+        set_error_handler('\Chadicus\Util\Exception::raise');
         try {
             trigger_error('test', E_USER_NOTICE);
         } catch (\ErrorException $e) {
@@ -76,7 +76,7 @@ final class UtilTest extends \PHPUnit_Framework_TestCase
     public function raiseErrorReportingDisabled()
     {
         $restoreLevel = error_reporting(0);
-        $this->assertFalse(Util::raise(E_USER_NOTICE, 'test', __FILE__, __LINE__));
+        $this->assertFalse(Exception::raise(E_USER_NOTICE, 'test', __FILE__, __LINE__));
         error_reporting($restoreLevel);
     }
 
@@ -91,7 +91,7 @@ final class UtilTest extends \PHPUnit_Framework_TestCase
     public function toArray()
     {
         $expectedLine = __LINE__ + 1;
-        $result = Util::toArray(new \RuntimeException('a message', 21));
+        $result = Exception::toArray(new \RuntimeException('a message', 21));
 
         $expected = array(
             'type' => 'RuntimeException',
@@ -117,7 +117,7 @@ final class UtilTest extends \PHPUnit_Framework_TestCase
     {
         $restoreLevel = error_reporting(0);
         trigger_error('test', E_USER_NOTICE);
-        $exception = Util::fromLastError();
+        $exception = Exception::fromLastError();
         $this->assertSame('test', $exception->getMessage());
         $this->assertSame(0, $exception->getCode());
         $this->assertSame(E_USER_NOTICE, $exception->getSeverity());
