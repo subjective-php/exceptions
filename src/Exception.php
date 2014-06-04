@@ -52,14 +52,21 @@ class Exception
      */
     final public static function toArray(\Exception $exception)
     {
-        return array(
+        $result = array(
             'type' => get_class($exception),
             'message' => $exception->getMessage(),
             'code' => $exception->getCode(),
             'file' => $exception->getFile(),
             'line' => $exception->getLine(),
             'trace' => $exception->getTrace(),
+            'previous' => null,
         );
+
+        if ($exception->getPrevious() !== null) {
+            $result['previous'] = self::toArray($exception->getPrevious());
+        }
+
+        return $result;
     }
 
     /**

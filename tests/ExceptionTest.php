@@ -92,7 +92,6 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
     {
         $expectedLine = __LINE__ + 1;
         $result = Exception::toArray(new \RuntimeException('a message', 21));
-
         $expected = array(
             'type' => 'RuntimeException',
             'message' => 'a message',
@@ -100,6 +99,40 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
             'file' => __FILE__,
             'line' => $expectedLine,
             'trace' => $result['trace'],
+            'previous' => null,
+        );
+
+        $this->assertSame($expected, $result);
+    }
+
+    /**
+     * Verify basic behavior of toArray().
+     *
+     * @test
+     * @covers ::toArray
+     *
+     * @return void
+     */
+    public function toArrayWithPrevous()
+    {
+        $expectedLine = __LINE__ + 1;
+        $result = Exception::toArray(new \RuntimeException('a message', 21, new \Exception('a previous', 33)));
+        $expected = array(
+            'type' => 'RuntimeException',
+            'message' => 'a message',
+            'code' => 21,
+            'file' => __FILE__,
+            'line' => $expectedLine,
+            'trace' => $result['trace'],
+            'previous' => array(
+                'type' => 'Exception',
+                'message' => 'a previous',
+                'code' => 33,
+                'file' => __FILE__,
+                'line' => $expectedLine,
+                'trace' => $result['previous']['trace'],
+                'previous' => null,
+            ),
         );
 
         $this->assertSame($expected, $result);
