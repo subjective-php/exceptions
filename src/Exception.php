@@ -58,7 +58,7 @@ class Exception
             'code' => $exception->getCode(),
             'file' => $exception->getFile(),
             'line' => $exception->getLine(),
-            'trace' => $exception->getTraceAsString(),
+            'trace' => $exception->getTrace(),
         );
     }
 
