@@ -46,12 +46,13 @@ class Exception
     /**
      * Converts the given Exception to an array.
      *
-     * @param \Exception $exception The exception to convert.
-     * @param integer    $depth     User specified recursion depth.
+     * @param \Exception $exception     The exception to convert.
+     * @param boolean    $traceAsString Flag to return the exception trace as a string or array.
+     * @param integer    $depth         User specified recursion depth.
      *
      * @return array
      */
-    final public static function toArray(\Exception $exception, $depth = 512)
+    final public static function toArray(\Exception $exception, $traceAsString = false, $depth = 512)
     {
         $result = array(
             'type' => get_class($exception),
@@ -59,12 +60,12 @@ class Exception
             'code' => $exception->getCode(),
             'file' => $exception->getFile(),
             'line' => $exception->getLine(),
-            'trace' => $exception->getTrace(),
+            'trace' => $traceAsString ? $exception->getTraceAsString() : $exception->getTrace(),
             'previous' => null,
         );
 
         if ($exception->getPrevious() !== null && --$depth) {
-            $result['previous'] = self::toArray($exception->getPrevious(), $depth);
+            $result['previous'] = self::toArray($exception->getPrevious(), $traceAsString, $depth);
         }
 
         return $result;

@@ -151,7 +151,7 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
         $first = new \ErrorException('first', 11, 1, 'file1.php', 1);
         $second = new \ErrorException('second', 22, 1, 'file2.php', 2, $first);
         $third = new \ErrorException('third', 33, 1, 'file3.php', 3, $second);
-        $result = Exception::toArray($third, 2);
+        $result = Exception::toArray($third, false, 2);
 
         $expected = array(
             'type' => get_class($third),
