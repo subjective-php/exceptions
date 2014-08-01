@@ -47,10 +47,11 @@ class Exception
      * Converts the given Exception to an array.
      *
      * @param \Exception $exception The exception to convert.
+     * @param integer    $depth     User specified recursion depth.
      *
      * @return array
      */
-    final public static function toArray(\Exception $exception)
+    final public static function toArray(\Exception $exception, $depth = 512)
     {
         $result = array(
             'type' => get_class($exception),
@@ -62,8 +63,8 @@ class Exception
             'previous' => null,
         );
 
-        if ($exception->getPrevious() !== null) {
-            $result['previous'] = self::toArray($exception->getPrevious());
+        if ($exception->getPrevious() !== null && --$depth) {
+            $result['previous'] = self::toArray($exception->getPrevious(), $depth);
         }
 
         return $result;

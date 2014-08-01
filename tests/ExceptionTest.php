@@ -139,6 +139,42 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Verifies basic behavior of toArray() with a user specified depth.
+     *
+     * @test
+     * @covers ::toArray
+     *
+     * @return void
+     */
+    public function toArrayWithDepth()
+    {
+        $first = new \ErrorException('first', 11, 1, 'file1.php', 1);
+        $second = new \ErrorException('second', 22, 1, 'file2.php', 2, $first);
+        $third = new \ErrorException('third', 33, 1, 'file3.php', 3, $second);
+        $result = Exception::toArray($third, 2);
+
+        $expected = array(
+            'type' => get_class($third),
+            'message' => $third->getMessage(),
+            'code' => $third->getCode(),
+            'file' => $third->getFile(),
+            'line' => $third->getLine(),
+            'trace' => $third->getTrace(),
+            'previous' => array(
+                'type' => get_class($second),
+                'message' => $second->getMessage(),
+                'code' => $second->getCode(),
+                'file' => $second->getFile(),
+                'line' => $second->getLine(),
+                'trace' => $second->getTrace(),
+                'previous' => null,
+            ),
+        );
+
+        $this->assertSame($expected, $result);
+    }
+
+    /**
      * Verifies basic behavior of fromLastError().
      *
      * @test
