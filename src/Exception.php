@@ -74,7 +74,7 @@ class Exception
     /**
      * Creates an ErrorException based on the error from error_get_last().
      *
-     * @return \ErrorException|null
+     * @return \ErrorException
      */
     final public static function fromLastError()
     {
