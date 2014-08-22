@@ -1,5 +1,11 @@
 # Chadicus\Exceptions
 [![Build Status](https://travis-ci.org/chadicus/exceptions-php.png)](https://travis-ci.org/chadicus/exceptions-php)
+[![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/chadicus/exceptions-php.svg?style=flat)](https://scrutinizer-ci.com/g/chadicus/exceptions-php/)
+[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/chadicus/exceptions-php.svg?style=flat)](https://scrutinizer-ci.com/g/chadicus/exceptions-php/)
+[![Latest Stable Version](http://img.shields.io/packagist/v/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
+[![Total Downloads](http://img.shields.io/packagist/dt/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
+[![License](http://img.shields.io/packagist/l/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
+
 
 
 A collection of utility classes to work with PHP Exceptions

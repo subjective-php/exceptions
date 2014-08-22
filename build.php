@@ -29,8 +29,6 @@ foreach ($xml->xpath('//file/metrics') as $metric) {
     }
 }
 
-unlink('clover.xml');
-
 echo "Code coverage was 100%\n";
 
 passthru('./vendor/bin/phploc --quiet --log-xml="phploc.xml" src', $returnStatus);
@@ -70,5 +68,3 @@ if ($averageClassCount > 15) {
 }
 
 echo "Average classes per namespace is {$averageClassCount}\n";
-
-unlink('phploc.xml');
