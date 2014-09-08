@@ -1,6 +1,7 @@
 # Chadicus\Exceptions
 [![Build Status](http://img.shields.io/travis/chadicus/exceptions-php.svg?style=flat)](https://travis-ci.org/chadicus/exceptions-php)
 [![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/chadicus/exceptions-php.svg?style=flat)](https://scrutinizer-ci.com/g/chadicus/exceptions-php/)
+[![Code Coverage](http://img.shields.io/coveralls/chadicus/exceptions-php.svg?style=flat)](https://coveralls.io/r/chadicus/exceptions-php)
 [![Latest Stable Version](http://img.shields.io/packagist/v/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
 [![Total Downloads](http://img.shields.io/packagist/dt/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
 [![License](http://img.shields.io/packagist/l/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
