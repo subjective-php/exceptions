@@ -4,6 +4,6 @@ namespace Chadicus;
 /**
  * Exception thrown if a resource such as a database record or file is not found.
  */
-class NotFoundException extends \Exception
+class NotFoundException extends \RuntimeException
 {
 }
