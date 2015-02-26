@@ -3,5 +3,10 @@ php:
   - 5.6
   - 5.5
   - 5.4
+  - 7
 script: ./build.php
 after_script: ./vendor/bin/coveralls -v
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: 7
