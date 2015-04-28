@@ -3,11 +3,6 @@
 chdir(__DIR__);
 
 $returnStatus = null;
-passthru('composer install --dev', $returnStatus);
-if ($returnStatus !== 0) {
-    exit(1);
-}
-
 passthru(
     './vendor/bin/phpcs --standard=PSR2 src tests *.php',
     $returnStatus

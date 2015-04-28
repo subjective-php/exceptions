@@ -4,6 +4,7 @@ php:
   - 5.5
   - 5.4
   - 7
+install: composer install
 script: ./build.php
 after_script: ./vendor/bin/coveralls -v
 matrix:
