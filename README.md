@@ -5,6 +5,7 @@
 [![Latest Stable Version](http://img.shields.io/packagist/v/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
 [![Total Downloads](http://img.shields.io/packagist/dt/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
 [![License](http://img.shields.io/packagist/l/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
+[![Documentation](https://img.shields.io/badge/reference-phpdoc-blue.svg?style=flat)](http://chadicus.github.io/exceptions-php)
 
 
 
@@ -25,8 +26,6 @@ To add the library as a local, per-project dependency use [Composer](http://getc
     }
 }
 ```
-##Documentation
-PHP docs for the project can be found [here](http://chadicus.github.io/exceptions-php).
 
 ##Contact
 Developers may be contacted at:
