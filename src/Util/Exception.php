@@ -11,7 +11,7 @@ class Exception
      *
      * @param \Exception $exception The exception of which to find a base exception.
      *
-     * @return Exception
+     * @return \Exception
      */
     final public static function getBaseException(\Exception $exception)
     {
