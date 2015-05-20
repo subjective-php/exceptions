@@ -92,7 +92,7 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
     {
         $expectedLine = __LINE__ + 1;
         $result = Exception::toArray(new \RuntimeException('a message', 21));
-        $expected = array(
+        $expected = [
             'type' => 'RuntimeException',
             'message' => 'a message',
             'code' => 21,
@@ -100,7 +100,7 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
             'line' => $expectedLine,
             'trace' => $result['trace'],
             'previous' => null,
-        );
+        ];
 
         $this->assertSame($expected, $result);
     }
@@ -117,14 +117,14 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
     {
         $expectedLine = __LINE__ + 1;
         $result = Exception::toArray(new \RuntimeException('a message', 21, new \Exception('a previous', 33)));
-        $expected = array(
+        $expected = [
             'type' => 'RuntimeException',
             'message' => 'a message',
             'code' => 21,
             'file' => __FILE__,
             'line' => $expectedLine,
             'trace' => $result['trace'],
-            'previous' => array(
+            'previous' => [
                 'type' => 'Exception',
                 'message' => 'a previous',
                 'code' => 33,
@@ -132,8 +132,8 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
                 'line' => $expectedLine,
                 'trace' => $result['previous']['trace'],
                 'previous' => null,
-            ),
-        );
+            ],
+        ];
 
         $this->assertSame($expected, $result);
     }
@@ -153,14 +153,14 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
         $third = new \ErrorException('third', 33, 1, 'file3.php', 3, $second);
         $result = Exception::toArray($third, false, 2);
 
-        $expected = array(
+        $expected = [
             'type' => get_class($third),
             'message' => $third->getMessage(),
             'code' => $third->getCode(),
             'file' => $third->getFile(),
             'line' => $third->getLine(),
             'trace' => $third->getTrace(),
-            'previous' => array(
+            'previous' => [
                 'type' => get_class($second),
                 'message' => $second->getMessage(),
                 'code' => $second->getCode(),
@@ -168,8 +168,8 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
                 'line' => $second->getLine(),
                 'trace' => $second->getTrace(),
                 'previous' => null,
-            ),
-        );
+            ],
+        ];
 
         $this->assertSame($expected, $result);
     }

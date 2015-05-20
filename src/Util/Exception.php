@@ -54,7 +54,7 @@ class Exception
      */
     final public static function toArray(\Exception $exception, $traceAsString = false, $depth = 512)
     {
-        $result = array(
+        $result = [
             'type' => get_class($exception),
             'message' => $exception->getMessage(),
             'code' => $exception->getCode(),
@@ -62,7 +62,7 @@ class Exception
             'line' => $exception->getLine(),
             'trace' => $traceAsString ? $exception->getTraceAsString() : $exception->getTrace(),
             'previous' => null,
-        );
+        ];
 
         if ($exception->getPrevious() !== null && --$depth) {
             $result['previous'] = self::toArray($exception->getPrevious(), $traceAsString, $depth);
