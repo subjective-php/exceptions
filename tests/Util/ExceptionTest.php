@@ -148,9 +148,9 @@ final class ExceptionTest extends \PHPUnit_Framework_TestCase
      */
     public function toArrayWithDepth()
     {
-        $first = new \ErrorException('first', 11, 1, 'file1.php', 1);
-        $second = new \ErrorException('second', 22, 1, 'file2.php', 2, $first);
-        $third = new \ErrorException('third', 33, 1, 'file3.php', 3, $second);
+        $first = new \Exception('first', 11);
+        $second = new \Exception('second', 22, $first);
+        $third = new \Exception('third', 33, $second);
         $result = Exception::toArray($third, false, 2);
 
         $expected = [
