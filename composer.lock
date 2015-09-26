@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cc597bd4cd8b16d4da90a206077edd62",
+    "hash": "f8323156ee85b370e2f31275760a3002",
+    "content-hash": "13d67727e4e5751414ced1590a5ad411",
     "packages": [
         {
             "name": "chadicus/spl-exceptions",
-            "version": "v0.1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chadicus/spl-exceptions-php.git",
-                "reference": "38a7231180e478919716f6c049e0a9a234d5d02f"
+                "reference": "36734a57b1a9da547e184e81d96569fd88249d2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chadicus/spl-exceptions-php/zipball/38a7231180e478919716f6c049e0a9a234d5d02f",
-                "reference": "38a7231180e478919716f6c049e0a9a234d5d02f",
+                "url": "https://api.github.com/repos/chadicus/spl-exceptions-php/zipball/36734a57b1a9da547e184e81d96569fd88249d2e",
+                "reference": "36734a57b1a9da547e184e81d96569fd88249d2e",
                 "shasum": ""
             },
             "require": {
@@ -43,6 +44,7 @@
                 {
                     "name": "Chad Gray",
                     "email": "chadwickgray@gmail.com",
+                    "homepage": "http://chadicus.org",
                     "role": "Developer"
                 }
             ],
@@ -51,20 +53,20 @@
                 "exception",
                 "spl"
             ],
-            "time": "2015-07-21 20:53:56"
+            "time": "2015-09-17 16:38:02"
         },
         {
             "name": "chadicus/util-exceptions",
-            "version": "v0.1.0",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chadicus/util-exceptions-php.git",
-                "reference": "ce433458ba8ce4d58fc329c55e87516f5f6c28ce"
+                "reference": "61982663887e66ec1b97daa251d87f5280995a67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chadicus/util-exceptions-php/zipball/ce433458ba8ce4d58fc329c55e87516f5f6c28ce",
-                "reference": "ce433458ba8ce4d58fc329c55e87516f5f6c28ce",
+                "url": "https://api.github.com/repos/chadicus/util-exceptions-php/zipball/61982663887e66ec1b97daa251d87f5280995a67",
+                "reference": "61982663887e66ec1b97daa251d87f5280995a67",
                 "shasum": ""
             },
             "require": {
@@ -89,6 +91,7 @@
                 {
                     "name": "Chad Gray",
                     "email": "chadwickgray@gmail.com",
+                    "homepage": "http://chadicus.org",
                     "role": "Developer"
                 }
             ],
@@ -97,7 +100,7 @@
                 "exception",
                 "util"
             ],
-            "time": "2015-07-21 21:41:54"
+            "time": "2015-09-25 23:54:23"
         }
     ],
     "packages-dev": [],
