@@ -1,11 +1,13 @@
 {
     "name": "chadicus/exceptions",
+    "type": "metapackage",
     "description": "Collection of exception class and utilities",
     "keywords": ["exception", "util", "spl"],
     "authors": [
         {
             "name": "Chad Gray",
             "email": "chadwickgray@gmail.com",
+            "homepage": "http://chadicus.org",
             "role": "Developer"
         }
     ],
