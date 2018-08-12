@@ -8,7 +8,7 @@
         "sort-packages": true
     },
     "require": {
-        "chadicus/spl-exceptions": "~1.0",
+        "subjective-php/spl-exceptions": "^3.0",
         "subjective-php/util-exceptions": "^4.0"
     }
 }
