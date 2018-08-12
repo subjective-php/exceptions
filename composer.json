@@ -9,6 +9,6 @@
     },
     "require": {
         "chadicus/spl-exceptions": "~1.0",
-        "chadicus/util-exceptions": "~1.0"
+        "subjective-php/util-exceptions": "^4.0"
     }
 }
