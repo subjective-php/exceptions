@@ -1,14 +1,20 @@
 {
-    "name": "subjective-php/exceptions",
+    "name": "chadicus/exceptions",
     "type": "metapackage",
     "description": "Collection of exception class and utilities",
     "keywords": ["exception", "util", "spl"],
+    "authors": [
+        {
+            "name": "Chad Gray",
+            "email": "chadwickgray@gmail.com",
+            "homepage": "http://chadicus.org",
+            "role": "Developer"
+        }
+    ],
     "license": "MIT",
-    "config": {
-        "sort-packages": true
-    },
     "require": {
-        "subjective-php/spl-exceptions": "^3.0",
-        "subjective-php/util-exceptions": "^4.0"
+        "php": "~5.4",
+        "chadicus/spl-exceptions": "~1.0",
+        "chadicus/util-exceptions": "~1.0"
     }
 }

@@ -1,23 +1,28 @@
-# SubjectivePHP\Exceptions
+# Chadicus\Exceptions
+[![Latest Stable Version](http://img.shields.io/packagist/v/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
+[![Total Downloads](http://img.shields.io/packagist/dt/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
+[![License](http://img.shields.io/packagist/l/chadicus/exceptions.svg?style=flat)](https://packagist.org/packages/chadicus/exceptions)
 
-[![Latest Stable Version](http://img.shields.io/packagist/v/subjective-php/exceptions.svg?style=flat)](https://packagist.org/packages/subjective-php/exceptions)
-[![Total Downloads](http://img.shields.io/packagist/dt/subjective-php/exceptions.svg?style=flat)](https://packagist.org/packages/subjective-php/exceptions)
-[![License](http://img.shields.io/packagist/l/subjective-php/exceptions.svg?style=flat)](https://packagist.org/packages/subjective-php/exceptions)
+A collection of utility classes to work with PHP Exceptions
 
 ## Requirements
 
-SubjectivePHP\Exceptions requires PHP 7.0 (or later).
+Chadicus\Exceptions requires PHP 5.4 (or later).
 
-## Composer
+##Composer
+To add the library as a local, per-project dependency use [Composer](http://getcomposer.org)! Simply add a dependency on
+`chadicus/exceptions` to your project's `composer.json` file such as:
 
-To add the library as a local, per-project dependency use [Composer](http://getcomposer.org)! Simply add a dependency on `subjective-php/exceptions` to your project's `composer.json` file such as:
-
-```sh
-composer require subjective-php/exceptions
+```json
+{
+    "require": {
+        "chadicus/exceptions": "~3.0"
+    }
+}
 ```
 ## Components
 
 This package is a metapackage aggregating the following components:
 
-* [subjective-php/spl-exceptions](https://github.com/subjective-php/spl-exceptions-php)
-* [subjective-php/util-exceptions](https://github.com/subjective-php/util-exceptions-php)
+* [chadicus/spl-exceptions](https://github.com/chadicus/spl-exceptions-php)
+* [chadicus/util-exceptions](https://github.com/chadicus/util-exceptions-php)
